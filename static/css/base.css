@@ -1,0 +1,931 @@
+/* ------------------------------------------- CORE STYLING */
+
+html {
+    height: 100%;
+} /* Allows for h100 and vertical center classes to work */
+
+body {
+    background-color: #F8F9FA;
+    font-family: 'Chivo', sans-serif;
+    color: #333333;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+} /* Pushes footer to bottom of viewport */
+
+.site-content {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+} /* Ensures site content is above footer */
+
+.breadcrumb-item {
+    color: #333333 !important;
+} /* Sets color of active breadcrumb item to charcoal, important to over ride bootstrap active class */
+
+.breadcrumb-item > a {
+    color: #000080 !important;
+    text-decoration: none;
+    }
+    .breadcrumb-item > a:hover {
+        text-decoration: underline;
+    } /* Sets the color of the breadcrumb navigation items to navy and underlines on hover */
+
+
+/* ------------------------------------------- TEXT & ICON STYLES */
+
+.logo-font {
+    font-weight: 900;
+    font-style: italic;
+} /* Used to style site logo text */
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+} /* From Bulma, ensures font awesome icons are centered and sized consistently */
+
+.white-yellow {
+    text-decoration: none;
+    color: #FFFFFF !important;
+    }
+    .white-yellow:hover {
+        text-decoration: none;
+        color: #F5E532 !important;
+    } /* text color & hover styling, used to contrast bg-charcoal */
+
+.charcoal-navy {
+    text-decoration: none;
+    color: #333333 !important;
+    }
+    .charcoal-navy:hover {
+        text-decoration: none;
+        color: #000080 !important;
+    } /* text color & hover styling, used to contrast bg-light & bg-white,
+        important is used to over ride bootstrap styling on nav-links. */
+
+.navy-charcoal {
+    text-decoration: none;
+    color: #000080 !important;
+    }
+    .navy-charcoal:hover {
+        text-decoration: none;
+        color: #333333 !important;
+    } /* text color & hover styling, used to contrast bg-light & bg-white,
+        important is used to over ride bootstrap styling. */
+
+.text-charcoal {
+    color: #333333;
+} /* Text color class  */
+
+.text-navy {
+    color: #000080;
+} /* Text color class  */
+
+.text-yellow {
+    color: #F5E532;
+} /* Text color class  */
+
+.text-red {
+    color: #B30012;
+    } 
+    .text-red:hover {
+    color: #B30012;
+    } /* Used in place of the bootstrap 'danger' color class */
+
+.text-green {
+    color: #12633C;
+    }
+    .text-green:hover {
+        color: #12633C;
+    } /* Used in place of the bootstrap 'success' color class */
+    
+.fw-900 {
+    font-weight: 900;
+} /* Taken from the Chivo docs on google fonts */
+
+.fw-700 {
+    font-weight: 700;
+} /* Taken from the Chivo docs on google fonts */
+
+.fw-600 {
+    font-weight: 600;
+}
+
+
+/* ------------------------------------------- BACKGROUND STYLING */
+
+.bg-charcoal {
+    background-color: #333333;
+} /* background color class */
+
+.bg-navy {
+    background-color: #000080;
+} /* background color class */
+
+
+/* ------------------------------------------- BUTTON STYLING */
+
+.blue-charcoal-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #000080;
+    background: #000080;
+  }
+  .blue-charcoal-btn:hover {
+    background: #333333;
+    border: 2px solid #333333;
+    color: #FFFFFF
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.charcoal-blue-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #333333;
+    background: #333333;
+  }
+  .charcoal-blue-btn:hover {
+    background: #000080;
+    border: 2px solid #000080;
+    color: #FFFFFF
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.danger-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #B30012;
+    background: #B30012;
+  }
+  .danger-btn:hover {
+    background: #fff;
+    color: #B30012
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.cancel-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #333333;
+    background: #333333;
+  }
+  .cancel-btn:hover {
+    background: #fff;
+    color: #333333
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.update-btn {
+    text-decoration: none;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #12633C;
+    background: #12633C;
+  }
+  .update-btn:hover {
+    background: #fff;
+    color: #12633C
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.blank-btn {
+    border: none;
+    background: none;
+}  /* Used to remove core button styling on elements */
+
+.btn-fix-width {
+    width: 200px;
+} /* Fixes the width off buttons to ensure uniform display */
+
+.review-btn {
+    text-decoration: none;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #000080;
+    background: #000080;
+  }
+  .review-btn:hover {
+    background: #fff;
+    color: #000080
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+
+/* ------------------------------------------- MARGIN STYLINGS */
+
+.mt-neg-5 {
+    margin-top: -5px;
+}
+
+.mt-neg-10 {
+    margin-top: -10px;
+}
+
+.mt-neg-15 {
+    margin-top: -15px;
+}
+
+.mt-neg-20 {
+    margin-top: -20px;
+}
+
+@media screen and (max-width: 768px){
+    .mb-md-20 {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ------------------------------------------- BORDER STYLING */
+
+.border-charcoal {
+    border: 1px solid #333333;
+} /* Search bar input border */
+
+.border-blur {
+    border-width: 1px;
+    border-style: ridge;
+    border-color: rgba(51, 51, 51, 0.15);
+}
+
+.border-charcoal-round {
+    border: 1px solid #333333;
+    border-radius: 4px;
+} /* checkout success ticket border */
+
+.light-border {
+    box-shadow: 0px 0px 15px -10px #333333;
+}
+
+
+/* ------------------------------------------- HEADER STYLING */
+
+.header-container {
+    margin-top: 15px;
+} /* Adds top margin to the breadcrumb container */
+
+
+/* ------------------------------------------- FOOTER STYLING */
+
+.newsletter-email {
+    width: 300px;
+    height: 36px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    padding: 0px 20px;
+} /* Mail Chimp newsletter */
+
+.newsletter-subscribe {
+    margin-left: 6px;
+} /* Mail Chimp newsletter button container */
+
+.subscribe-button {
+    min-width: 130px;
+    height: 40px;
+    color: #333333;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #F5E532;
+    background: #F5E532;
+  }
+  .subscribe-button:hover {
+    background: #333333;
+    color: #F5E532
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+@media screen and (min-width: 1201px) and (max-width: 1453px) {
+    .newsletter-email {
+        width: 65%;
+    }
+
+    .newsletter-subscribe {
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .newsletter-email {
+        width: 100%;
+    }
+
+    .newsletter-subscribe {
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+
+/* ------------------------------------------- BOOTSTRAP TOAST STYLES */
+
+.message-container {
+    position: fixed;
+    width: 280px;
+    top: 60px;
+    right: 10px;
+    z-index: 99999999999;
+} /* Container positioning */
+
+@media screen and (max-width: 576px) {
+    .message-container {
+        top: 72px;
+        right: 15px;
+    }
+}
+
+.custom-toast {
+    overflow: visible;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+} /* Top border for toasts & makes the cart contents scrollable past 400px */
+
+.toast-capper {
+    height: 2px;
+} /* Top border for toasts */
+
+.bg-green {
+    background-color: #12633C;
+} /* green background for success toast */
+
+.bg-red {
+    background-color: #B30012;
+} /* red background for error toast */
+
+.checkout-btn {
+    width: 100%;
+} /* Sets the width of the checkout button */
+
+
+/* ------------------------------------------- FAQ ACCORDION STYLES */
+
+.accordion-button:not(.collapsed) {
+    color: #FFFFFF !important;
+    background-color: #000080 !important;
+} /* Sets the background color of the accordion button to navy with contrasting text,
+marked important to make sure it over rides bootstrap styles. */
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+} /* Sets the toggle button to white.
+Taken from - https://stackoverflow.com/questions/66231936/change-accordion-button-collapsed-icon-color-in-bootstrap-5 */
+
+
+/* ------------------------------------------- PRODUCTS STYLES */
+
+.name-container {
+    width: 100%;
+}
+
+.category-container {
+    height: fit-content;
+} /* Ensures background for categories doesn't extend entire page (products.html) */
+
+.type-link {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.fav-btn {
+    color: #B30012;
+    }
+    .fav-btn:hover {
+        color: #A30010;
+    } /* Sets the color and hover effect of the favorite heart */
+
+.btt-button {
+    border-radius: 10px;
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999999999;
+} /* Sets a static width height and position to the bottom right of the screen */
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+} /* makes the cursor into a pointer. for return to top JS function on products.html */
+
+.add-qty-input { 
+    height: 100%;
+} /* Sets the height of the input box itself */
+
+.add-qty-group {
+    width: 60%;
+} /* Sets the width of the +/- buttons and input box */
+
+
+@media screen and (max-width: 1200px) {
+    .add-qty-group {
+        width: 100%;
+    }
+}
+
+ @media screen and (max-width: 992px) {
+    .add-qty-group {
+        width: 80%;
+    }
+    .add-weight-group {
+        width: 80%;
+    } /* Used to ensure weight and quantity areas display evenly */
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+    .add-qty-group {
+        width: 50%;
+    }
+    .add-weight-group {
+        width: 50%;
+    } /* Used to ensure weight and quantity areas display evenly */
+}
+
+@media screen and (max-width: 768px) {
+    .add-qty-group {
+        width: 30%;
+    }
+    .add-weight-group {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .add-qty-group {
+        width: 65%;
+    }
+    .add-weight-group {
+        width: 65%;
+    }
+}
+
+.qty-buttons {
+        background-color: #333333;
+        color: #FFFFFF;
+        height: 100%;
+    }
+    .qty-buttons:hover {
+        background-color: #000080;
+        color: #FFFFFF;
+    }
+
+
+/* ------------------------------------------- CART STYLES */
+
+.shopping-button {
+    width: 200px;
+}
+
+.edit-qty-input {
+    height: 80%;
+}
+
+.item-qty-form-cart {
+    width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+    .item-qty-form-cart {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .item-qty-form-cart {
+        width: 60%;
+    }
+}
+
+
+/* ------------------------------------------- PRODUCT MANAGEMENT STYLES */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+} /* set the overflow of the span wrapped around  file input to hidden */
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+} /* make sure that the entire input inside the span looks like a button. */
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #B30012;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #B30012;
+    border-color: #B30012;
+    border-radius: 0;
+}
+
+.image-btn {
+    margin-top: 10px;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #000080;
+    background: #000080;
+  }
+  .image-btn:hover {
+    background: #fff;
+    color: #000080
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+
+/* ------------------------------------------- CHECKOUT STYLES */
+
+.order-summary {
+    height: fit-content;
+} /* ensures the order summary container background doesn't extend past needed space */
+
+#id_country {
+    padding: 0px 12px !important;
+} /* ensures the placeholder text remains in the input box on the country field */
+
+select:invalid,
+select option[value=''] {
+  color: #747d84 !important;
+} /* sets the color equal to the other fields for the country field on the order form  */
+
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 #F8F9FA;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+} /* Styles all input fields on order form */
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #000080;
+} /* styles the box shadow on click for all input fields on order form */
+
+.StripeElement--webkit-autofill {
+  background-color: #ffffff !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #747d84;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #333333;
+    border: 1px solid #333333;
+}
+
+select,
+select option {
+  color: #333333;
+}
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000080CC;
+    z-index: 9999;
+} /* Sets the background color and positioning of the loading screen */
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+} /* Sets the background color and positioning of the loading screen spinner */
+
+/* ------------------------------------------- PROFILE STYLING */
+
+.navy-underline {
+    color: #000080;
+    text-decoration: none;
+    }
+    .navy-underline:hover {
+        color: #000080;
+        text-decoration: underline;
+    } /* Used to highlight the password and email set navigation links */
+
+#profile-update-form input::placeholder {
+    color: #333333;
+}
+
+
+/* ------------------------------------------- FAVORITES STYLING */
+
+.add-btn {
+    width: 100px;
+}
+
+
+/* ------------------------------------------- ABOUT US STYLING */
+
+.about-us-img {
+    background: url('/media/about_us.jpg') no-repeat center center;
+    border-radius: 25px;
+    background-size: cover;
+}
+
+
+/* ------------------------------------------- MAIL SUCCESS, 404 & 500 STYLING */
+
+
+.hero-img {
+    background: url('/media/hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+} /* sets the background image */
+
+.overlay-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} /* allows for positioning of the square over the hero-img class */
+
+.square {
+    height: 300px;
+    width: 450px;
+    border-radius: 25px;
+    background-color: rgba(51, 51, 51, 0.90)
+} /* sets the size and color of the square */
+
+@media screen and (max-width: 768px) {
+    .square {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .square {
+        height: 45vh;
+    }
+}
+
+
+/* ------------------------------------------- HOME STYLING */
+
+.banner {
+    background-color: #333333;
+    height: fit-content;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.carousel-container {
+    width: 314px;
+} /* ensures carousel width doesn't extend on slide action  */
+
+.product-carousel {
+    height: 300px;
+    width: 300px;
+} /* sets the size of the carousel to match the type image container */
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+} /* specifies the carousel image to fill its container */
+
+.carousel-border {
+    border: solid 7px rgba(51, 51, 51, 0.7);
+    border-radius: 25px;
+    box-sizing: border-box;
+} /* adds a border to the carousel */
+
+.image-00 {
+    background: #000080 url('/media/00_sweets.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    border-top: 7px solid rgba(0, 0, 128, 0.8);
+    border-bottom: 7px solid rgba(0, 0, 128, 0.8);
+    border-right: 7px solid rgba(0, 0, 128, 0.8);
+    height: fit-content;
+} /* the image for the 00's sweets section */
+
+.image-90 {
+    background: #333333 url('/media/90_sweets.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    border-top: 8px solid rgba(51, 51, 51, 0.8);
+    border-bottom: 7.5px solid rgba(51, 51, 51, 0.8);
+    border-left: 7px solid rgba(51, 51, 51, 0.8);
+    height: fit-content;
+} /* the image for the 00's sweets section */
+
+.image-80 {
+    background: #000080 url('/media/80_sweets.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    border-top: 8px solid rgba(0, 0, 128, 0.8);
+    border-bottom: 8px solid rgba(0, 0, 128, 0.8);
+    border-right: 7px solid rgba(0, 0, 128, 0.8);
+    height: fit-content;
+} /* the image for the 00's sweets section */
+
+.blue-square-wrapper {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+} /* wrapper for the blue square, allows positioning at start of container */
+
+.blue-square {
+    height: 300px;
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 128, 0.8)
+} /* sets the size and color of the blue square */
+
+.charcoal-square-wrapper {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+} /* wrapper for the charcoal square, allows positioning at end of container */
+
+.charcoal-square {
+    height: 300px;
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.8)
+} /* sets the size and color of the charcoal square */
+
+.charcoal-rectangle {
+    height: 190px;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8)
+} /* sets the size and color of the charcoal rectangle over the banner image */
+
+.shop-now-blue-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #000080;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    text-decoration: none;
+  }
+  .shop-now-blue-btn:hover {
+    background: #000080;
+    border: 2px solid #ffffff;
+    color: #ffffff
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.shop-now-charcoal-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #333333;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    text-decoration: none;
+  }
+  .shop-now-charcoal-btn:hover {
+    background: #333333;
+    border: 2px solid #ffffff;
+    color: #ffffff
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.type-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid rgba(51, 51, 51, 0.8);
+    background: rgba(51, 51, 51, 0.8);
+  }
+  .type-btn:hover {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333333
+  } /* Taken from https://markodenic.com/tools/buttons-generator/ */
+
+.carousel-control-prev-icon {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%333333'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+    .carousel-control-prev-icon:hover {
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%200080'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+
+.carousel-control-next-icon {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%333333'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    .carousel-control-next-icon:hover {
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%200080'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
